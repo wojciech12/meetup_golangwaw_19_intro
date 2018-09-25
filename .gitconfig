@@ -1,0 +1,24 @@
+[user]
+	email = wojciech.barczynski@smacc.io
+	name = wojciech12
+[core]
+	excludesfile = /Users/wojciech.barczynski/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Users/wojciech.barczynski/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[gpg]
+	program = /usr/local/bin/gpg2
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[hub]
+	user = wojciech12
+
+# go dep narzeka :/
+[url "git@github.com:smaccio"]
+  insteadOf = https://github.com/smaccio
